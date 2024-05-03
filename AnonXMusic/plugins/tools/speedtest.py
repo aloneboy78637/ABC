@@ -3,11 +3,20 @@ import asyncio
 import speedtest
 from pyrogram import filters
 from pyrogram.types import Message
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.decorators.language import language
 
+
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
+
+#####
 
 def testspeed(m, _):
     try:
@@ -41,5 +50,5 @@ async def speedtest_function(client, message: Message, _):
         result["server"]["latency"],
         result["ping"],
     )
-    msg = await message.reply_photo(photo=result["share"], caption=output)
+    msg = await message.reply_photo(photo=result["share"], caption=output, reply_markup=InlineKeyboardMarkup(EVAA),)
     await m.delete()
