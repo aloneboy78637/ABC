@@ -14,10 +14,10 @@ API_HASH = getenv("API_HASH", None)
 OWNER_USERNAME = getenv("OWNER_USERNAME", "roy_editx")
 
 #❖  Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "AvishaxBot")
+BOT_USERNAME = getenv("BOT_USERNAME", "nykaaxBot")
 
 #❖  Don't Add style font 
-BOT_NAME = getenv("BOT_NAME", "AVISHA MUSIC")
+BOT_NAME = getenv("BOT_NAME", "NYKAA MUSIC")
 
 #❖ get Your Assistant User name
 ASSUSERNAME = getenv("ASSUSERNAME", "AVISHA_ASS")
@@ -28,7 +28,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 #❖ Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600000))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 1000000))
 
 #❖  Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001929735324"))
@@ -44,7 +44,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/tinaarobot/ABC",
+    "https://github.com/aloneboy78637/ABC",
 )
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
