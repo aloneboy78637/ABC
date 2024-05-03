@@ -93,12 +93,12 @@ async def userstatus(user_id):
       elif x == enums.UserStatus.ONLINE:
          return "User is online."
    except:
-        return "**✦ sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ !**"
+        return "✦ sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ."
     
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command(["xinfo", "xinformation", "xuserinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
+@app.on_message(filters.command(["info", "information", "userinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
 async def userinfo(_, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
