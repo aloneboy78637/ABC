@@ -18,7 +18,7 @@ def pic(client, message):
     if random_pic:
         message.reply_photo(random_pic)
     else:
-        message.reply("✦ Sorry, I couldn't get a random picture at the moment. 😔")
+        message.reply("✦ sᴛᴏʀʏ, ɪ ᴄᴏᴜʟᴅɴ'ᴛ ɢᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ ᴘɪᴄᴛᴜʀᴇ ᴀᴛ ᴛʜᴇ ᴍᴏᴍᴇɴᴛ.")
 
 @app.on_message(filters.command("pic"))
 def pic_command(client, message: Message):
@@ -26,7 +26,7 @@ def pic_command(client, message: Message):
     try:
         name = message.command[1]
     except IndexError:
-        client.send_message(message.chat.id, "✦ Please provide a name after the /pic command.")
+        client.send_message(message.chat.id, "⬤ ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴛʜᴇ ➥ /pic command.")
         return
 
    
@@ -35,8 +35,8 @@ def pic_command(client, message: Message):
     try:
         response = requests.get(unsplash_url)
         if response.status_code == 200:
-            client.send_photo(message.chat.id, photo=unsplash_url, caption=f"❖ ʜᴇʀᴇ's ᴀ ᴘɪᴄᴛᴜʀᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ➥ {name}.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐" )
+            client.send_photo(message.chat.id, photo=unsplash_url, caption=f"❖ ʜᴇʀᴇ's ᴀ ᴘɪᴄᴛᴜʀᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ➥ {name}." )
         else:
-            client.send_message(message.chat.id, "✦ Failed to fetch image.")
+            client.send_message(message.chat.id, "⬤ ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ɪᴍᴀɢᴇ.")
     except requests.RequestException as e:
-        client.send_message(message.chat.id, f"✦ An error occurred ➥ {str(e)}")        
+        client.send_message(message.chat.id, f"⬤ ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ➥ {str(e)}")        
