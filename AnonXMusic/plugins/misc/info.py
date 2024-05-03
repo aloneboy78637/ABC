@@ -71,8 +71,9 @@ INFO_TEXT = """
 ● ᴍᴇɴᴛɪᴏɴ ➥ {}
 ● ᴜsᴇʀ sᴛᴀᴛᴜs ➥ {}
 ● ᴜsᴇʀ ᴅᴄ ɪᴅ ➥ {}
+● ᴜsᴇʀ ʙɪᴏ ➥ {}
 
-❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐
+❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ɴ ʏ ᴋ ᴀ ᴀ ♡゙
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """
 
@@ -123,7 +124,7 @@ async def userinfo(_, message):
                 profile_path=photo,
             )
             await app.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
-                id, username, mention, status, dc_id), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
+                id, username, mention, status, dc_id, bio), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
         except Exception as e:
             await message.reply_text(str(e))        
       
@@ -146,7 +147,7 @@ async def userinfo(_, message):
                 profile_path=photo,
             )
             await app.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
-                id, username, mention, status, dc_id), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
+                id, username, mention, status, dc_id, bio), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
         except Exception as e:
             await message.reply_text(str(e))
 
@@ -171,7 +172,7 @@ async def userinfo(_, message):
                 profile_path=photo,
             )
             await app.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
-                id, username, mention, status, dc_id), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
+                id, username, mention, status, dc_id, bio), reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(EVAA),)
         except Exception as e:
             await message.reply_text(str(e))
 
